@@ -5,3 +5,19 @@
 
 //declare vars for installed packages
 var path = require('path');
+
+module.exports = function (app) {
+
+    app.get("/api/friends", function (req, res) {
+        res.json(friends)
+    });
+
+
+
+    //TA QUESTION: How do I link all of the work I did in the html doc to this. 
+    app.post("/api/friends", function (req, res) {
+        var newFriend = req.body
+        res.json(newFriend)
+    });
+
+}

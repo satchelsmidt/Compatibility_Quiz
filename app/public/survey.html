@@ -1,5 +1,3 @@
-<!-- Your survey should have 10 questions of your choosing. Each answer should be on a scale of 1 to 5 based on how much the user agrees or disagrees with a question. -->
-
 <!doctype html>
 <html lang="en">
 
@@ -22,20 +20,31 @@
     - user responses to 10 questions (recorded as numbers in an array)    
 All data should be gathered into a single object
 -->
+    <br>
+    <h3>About You</h3>
+    <br>
+    <form id="surveyForm" role="form" name="surveyForm">
+        <!-- add in method="POST'" -->
 
-    <form id="surveyForm">
-        Name (Required):<br>
-        <input type="text" name="userName">
-        <br><br>
-        Link to Photo (Required):<br>
-        <input type="text" name="userPhoto">
+        <div class="inputGroup">
+            <label for="userName"> Name (Required):</label>
+            <br>
+            <input id="userName" type="text" name="userName">
+        </div>
+        <br>
+        <div class="inputGroup">
+            <label for="userPhoto">Link to Photo (Required):
+            </label>    
+            <br>
+            <input id="userPhoto" type="text" name="userPhoto">
+        </div>
         <br>
     </form>
     <br>
     <div>
         <h4>Question One:</h4>
         <p>You enjoy long walks on the beach</p>
-        <select name="questionOne" form="surveyForm">
+        <select name="questionOne" form="surveyForm" class="selectResponse">
             <option selected="selected">Select an option</option>
             <option value='1'>1 (Strongly Disagree)</option>
             <option value='2'>2</option>
@@ -48,7 +57,7 @@ All data should be gathered into a single object
     <div>
         <h4>Question Two:</h4>
         <p>You like surprising your loved ones with gifts</p>
-        <select name="questionOne" form="surveyForm">
+        <select name="questionTwo" form="surveyForm" class="selectResponse">
             <option selected="selected">Select an option</option>
             <option value='1'>1 (Strongly Disagree)</option>
             <option value='2'>2</option>
@@ -61,7 +70,7 @@ All data should be gathered into a single object
     <div>
         <h4>Question Three:</h4>
         <p>You often rebel against authority</p>
-        <select name="questionOne" form="surveyForm">
+        <select name="questionThree" form="surveyForm" class="selectResponse">
             <option selected="selected">Select an option</option>
             <option value='1'>1 (Strongly Disagree)</option>
             <option value='2'>2</option>
@@ -74,7 +83,7 @@ All data should be gathered into a single object
     <div>
         <h4>Question Four:</h4>
         <p>You typically spend your free evenings out with friends</p>
-        <select name="questionOne" form="surveyForm">
+        <select name="questionFour" form="surveyForm" class="selectResponse">
             <option selected="selected">Select an option</option>
             <option value='1'>1 (Strongly Disagree)</option>
             <option value='2'>2</option>
@@ -87,7 +96,7 @@ All data should be gathered into a single object
     <div>
         <h4>Question Five:</h4>
         <p>You prefer pancakes over waffles</p>
-        <select name="questionOne" form="surveyForm">
+        <select name="questionFive" form="surveyForm" class="selectResponse">
             <option selected="selected">Select an option</option>
             <option value='1'>1 (Strongly Disagree)</option>
             <option value='2'>2</option>
@@ -100,7 +109,7 @@ All data should be gathered into a single object
     <div>
         <h4>Question Six:</h4>
         <p>You could never live in the Big City</p>
-        <select name="questionOne" form="surveyForm">
+        <select name="questionSix" form="surveyForm" class="selectResponse">
             <option selected="selected">Select an option</option>
             <option value='1'>1 (Strongly Disagree)</option>
             <option value='2'>2</option>
@@ -113,7 +122,7 @@ All data should be gathered into a single object
     <div>
         <h4>Question Seven:</h4>
         <p>Your favorite movie is <em>The Notebook</em></p>
-        <select name="questionOne" form="surveyForm">
+        <select name="questionSeven" form="surveyForm" class="selectResponse">
             <option selected="selected">Select an option</option>
             <option value='1'>1 (Strongly Disagree)</option>
             <option value='2'>2</option>
@@ -126,7 +135,7 @@ All data should be gathered into a single object
     <div>
         <h4>Question Eight:</h4>
         <p>You have never eaten an entire pizza by yourself</p>
-        <select name="questionOne" form="surveyForm">
+        <select name="questionEight" form="surveyForm" class="selectResponse">
             <option selected="selected">Select an option</option>
             <option value='1'>1 (Strongly Disagree)</option>
             <option value='2'>2</option>
@@ -139,7 +148,7 @@ All data should be gathered into a single object
     <div>
         <h4>Question Nine:</h4>
         <p>You like to take care of your health</p>
-        <select name="questionOne" form="surveyForm">
+        <select name="questionNine" form="surveyForm" class="selectResponse">
             <option selected="selected">Select an option</option>
             <option value='1'>1 (Strongly Disagree)</option>
             <option value='2'>2</option>
@@ -153,7 +162,7 @@ All data should be gathered into a single object
         <h4>Question Ten:</h4>
         <p>Your friends would describe you as 'every time I go near them I start to feel uncomfortable for some reason'
         </p>
-        <select name="questionOne" form="surveyForm">
+        <select name="questionTen" form="surveyForm" class="selectResponse">
             <option selected="selected">Select an option</option>
             <option value='1'>1 (Strongly Disagree)</option>
             <option value='2'>2</option>
@@ -163,19 +172,22 @@ All data should be gathered into a single object
         </select>
     </div>
     <br>
-    <input type="submit" form="surveyForm" value="Submit">
+    <input id="submitButton" type="submit" form="surveyForm" value="Submit">
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+    <!-- JS Script -->
+    <script type="text/javascript" src="assets/js/friends.js"></script>
+
 </body>
 
 </html>
