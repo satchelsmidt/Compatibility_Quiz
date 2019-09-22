@@ -1,23 +1,22 @@
-// Your apiRoutes.js file should contain two routes:
+//declare vars for installed packages (may not need)
+// var path = require('path');
 
-// A GET route with the url /api/friends. This will be used to display a JSON of all possible friends.
-// A POST routes /api/friends. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
+//require the empty 'friends' array that we created and exported in superFriends.js
+// var friends = require("../data/superFriends.js")
+var friends = [];
 
-//declare vars for installed packages
-var path = require('path');
-
+//Export our function to server.js, which will allow us to take in the express() app in that file and run these routing commands
 module.exports = function (app) {
-
+    //This route displays in JSON format the friends array that we have created
     app.get("/api/friends", function (req, res) {
         res.json(friends)
     });
 
-
-
-    //TA QUESTION: How do I link all of the work I did in the html doc to this. 
+    //This route (when hit) adds newFriend (the body of the request that the user is posting) into the friends array and displays it
     app.post("/api/friends", function (req, res) {
-        var newFriend = req.body
-        res.json(newFriend)
+        //put object returned from friends.js AJAX post request into variable here, push into array of existing friends
+        var newFriend = req.body;
+        friends.push(newFriend);
+        res.json(friends)
     });
-
 }
