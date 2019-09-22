@@ -4,7 +4,7 @@ var path = require('path');
 
 //Setting up express
 var app = express();
-var PORT = 4001;
+var PORT = process.env.PORT || 4004;
 
 //middleware
 app.use(express.urlencoded({extended: false}));
