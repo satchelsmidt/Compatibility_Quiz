@@ -27,6 +27,7 @@ var friends = [{
     scores: [1, 5, 5, 2, 4, 1, 1, 2, 3, 2]
 }];
 
+
 //Get modal elements from html and declare as vars
 var modal = document.getElementById("myModal");
 var span = document.getElementsByClassName("close")[0];
@@ -64,6 +65,9 @@ $("#submitButton").on("click", function (e) {
     friends.push(newFriend);
     console.log("ARRAY OF FRIENDS: ", friends);
 
+    //Run function to compare new friend to all other friends in array 
+    compareScores()
+
     //POST TO api/friends route with updated 'friends' array
     $.post({
         url: "/api/friends",
@@ -72,9 +76,6 @@ $("#submitButton").on("click", function (e) {
         console.log("response of post req", response);
 
     })
-
-    //Run function to compare new friend to all other friends in array 
-    compareScores()
 })
 
 //This function finds the two users in the array with the most compatibility

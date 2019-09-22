@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     <!-- Personal CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Be+Vietnam|Big+Shoulders+Text|Slabo+27px&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 </head>
 
@@ -18,7 +19,7 @@
     <h1>Love Compatibility Survey</h1>
     <br>
     <h3>About You</h3>
-    <br>
+    <hr>
     <form id="surveyForm" role="form" name="surveyForm">
         <!-- add in method='POST'? -->
 
@@ -37,8 +38,10 @@
         <br>
     </form>
     <br>
+    <h3>Questions</h3>
+    <hr>
     <div>
-        <h4>Question One:</h4>
+        <h5>Question One:</h5>
         <p>You enjoy long walks on the beach</p>
         <select name="questionOne" form="surveyForm" class="selectResponse">
             <option selected="selected">Select an option</option>
@@ -51,7 +54,7 @@
     </div>
     <br>
     <div>
-        <h4>Question Two:</h4>
+        <h5>Question Two:</h5>
         <p>You like surprising your loved ones with gifts</p>
         <select name="questionTwo" form="surveyForm" class="selectResponse">
             <option selected="selected">Select an option</option>
@@ -64,7 +67,7 @@
     </div>
     <br>
     <div>
-        <h4>Question Three:</h4>
+        <h5>Question Three:</h5>
         <p>You often rebel against authority</p>
         <select name="questionThree" form="surveyForm" class="selectResponse">
             <option selected="selected">Select an option</option>
@@ -77,7 +80,7 @@
     </div>
     <br>
     <div>
-        <h4>Question Four:</h4>
+        <h5>Question Four:</h5>
         <p>You typically spend your free evenings out with friends</p>
         <select name="questionFour" form="surveyForm" class="selectResponse">
             <option selected="selected">Select an option</option>
@@ -90,7 +93,7 @@
     </div>
     <br>
     <div>
-        <h4>Question Five:</h4>
+        <h5>Question Five:</h5>
         <p>You prefer pancakes over waffles</p>
         <select name="questionFive" form="surveyForm" class="selectResponse">
             <option selected="selected">Select an option</option>
@@ -103,7 +106,7 @@
     </div>
     <br>
     <div>
-        <h4>Question Six:</h4>
+        <h5>Question Six:</h5>
         <p>You could never live in the Big City</p>
         <select name="questionSix" form="surveyForm" class="selectResponse">
             <option selected="selected">Select an option</option>
@@ -116,7 +119,7 @@
     </div>
     <br>
     <div>
-        <h4>Question Seven:</h4>
+        <h5>Question Seven:</h5>
         <p>Your favorite movie is <em>The Notebook</em></p>
         <select name="questionSeven" form="surveyForm" class="selectResponse">
             <option selected="selected">Select an option</option>
@@ -129,7 +132,7 @@
     </div>
     <br>
     <div>
-        <h4>Question Eight:</h4>
+        <h5>Question Eight:</h5>
         <p>You have never eaten an entire pizza by yourself</p>
         <select name="questionEight" form="surveyForm" class="selectResponse">
             <option selected="selected">Select an option</option>
@@ -142,7 +145,7 @@
     </div>
     <br>
     <div>
-        <h4>Question Nine:</h4>
+        <h5>Question Nine:</h5>
         <p>You like to take care of your health</p>
         <select name="questionNine" form="surveyForm" class="selectResponse">
             <option selected="selected">Select an option</option>
@@ -155,7 +158,7 @@
     </div>
     <br>
     <div>
-        <h4>Question Ten:</h4>
+        <h5>Question Ten:</h5>
         <p>Your friends would describe you as 'Not exactly the life of the party'
         </p>
         <select name="questionTen" form="surveyForm" class="selectResponse">
@@ -187,6 +190,26 @@
         </div>
 
     </div>
+
+    <footer class="page-footer font-small blue pt-4">
+
+            <!-- Footer Links -->
+            <div class="container-fluid text-center text-md-left">
+        
+              <hr class="clearfix w-100 d-md-none pb-3">
+        
+              <!-- Grid column -->
+              <div class="col-md-3 mb-md-0 mb-3">
+        
+                <a href="api/friends">API Friends List</a> | 
+                <a href="https://github.com/satchelsmidt/Compatibility_Quiz">Github Repo</a>
+                <span><p>© 2019 Copyright: Satchel Smidt</p></span>
+        
+              </div>
+        
+            </div>
+        
+          </footer>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

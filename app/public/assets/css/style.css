@@ -1,3 +1,8 @@
+body{
+    padding: 20px;
+    background-color: lightblue;
+}
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -45,3 +50,29 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+  /* Footer Properties */
+  .footer{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 100px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+h1{
+    font-family: 'Slabo 27px', serif;
+}
+
+h5, h3, h2{
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+p{
+    font-family: 'Big Shoulders Text', cursive;
+}
+
+label{
+    font-family: 'Big Shoulders Text', cursive;
+}

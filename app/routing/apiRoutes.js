@@ -2,8 +2,9 @@
 // var path = require('path');
 
 //require the empty 'friends' array that we created and exported in superFriends.js
-// var friends = require("../data/superFriends.js")
-var friends = [];
+var friends = require("../data/superFriends.js")
+
+// var friends = [];
 
 //Export our function to server.js, which will allow us to take in the express() app in that file and run these routing commands
 module.exports = function (app) {
