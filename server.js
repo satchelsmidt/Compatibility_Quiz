@@ -7,6 +7,7 @@ var app = express();
 var PORT = process.env.PORT || 4004;
 
 //middleware
+//TODO:SET THIS TO extended : true, probably why your json files were formatted weird
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
