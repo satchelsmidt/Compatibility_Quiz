@@ -16,7 +16,7 @@ After all questions are answered and the user clicks 'Submit' at the bottom of t
 
 Here is a gif of the app functionality:
 <br>
-<img src="/app/public/assets/readme_1.gif" width="600" height="250"/>
+<img src="app/public/assets/readme_1.gif" width="600" height="250"/>
 
 ### Technology Used
 
